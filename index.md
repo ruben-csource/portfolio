@@ -1,5 +1,4 @@
 ---
-title: Welcome to my blog!!
-Yes!
+title: Welcome to my blog!!Yes!
 ---
 
