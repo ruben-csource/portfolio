@@ -6,49 +6,76 @@
   <title>Ruben Castellarin - Curriculum</title>
   <style>
     :root {
-      --bg: #f9f9f9;
-      --text: #222;
       --accent: #0077cc;
-      --border: #ddd;
+      --bg-start: #f0f4ff;
+      --bg-end: #eafaf1;
+      --text: #1d1d1d;
+      --card: white;
+      --border: #ccc;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+      color: var(--text);
     }
+
     header {
       position: sticky;
       top: 0;
-      background: white;
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--border);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      backdrop-filter: blur(10px);
       z-index: 10;
     }
+
     header h1 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin: 0;
     }
+
     nav a {
       margin-left: 1rem;
       text-decoration: none;
       color: var(--accent);
+      font-weight: bold;
     }
+
     .section {
-      padding: 2rem;
+      padding: 3rem 2rem;
       max-width: 900px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
     }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .hero {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       align-items: center;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     .hero img {
       width: 150px;
       height: 150px;
@@ -56,27 +83,42 @@
       object-fit: cover;
       border: 3px solid var(--accent);
     }
+
     .hero-info {
       flex: 1;
     }
+
     h2 {
       color: var(--accent);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
+
     ul {
       padding-left: 1.5rem;
+      line-height: 1.6;
     }
+
     .footer {
       text-align: center;
       padding: 2rem;
-      color: #777;
       font-size: 0.9rem;
+      color: #555;
     }
+
     @media (max-width: 600px) {
       .hero {
         flex-direction: column;
         text-align: center;
+      }
+
+      .hero-info {
+        text-align: center;
+      }
+
+      nav {
+        display: none;
       }
     }
   </style>
@@ -136,6 +178,24 @@
 <div class="footer">
   © 2025 Ruben Castellarin • <a href="https://github.com/tuo-username" target="_blank">GitHub</a> • <a href="https://linkedin.com/in/tuo-profilo" target="_blank">LinkedIn</a>
 </div>
+
+<script>
+  // Appare le sezioni al momento giusto mentre scorri
+  const sections = document.querySelectorAll('.section');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    sections.forEach(sec => {
+      const boxTop = sec.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        sec.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
 
 </body>
 </html>
