@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruben Castellarin - Curriculum</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --accent: #0077cc;
+      --border: #ddd;
+    }
+    body {
+      font-family: sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--accent);
+    }
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+    .hero-info {
+      flex: 1;
+    }
+    h2 {
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ruben Castellarin</h1>
+  <nav>
+    <a href="#esperienze">Esperienze</a>
+    <a href="#formazione">Studi</a>
+    <a href="#competenze">Competenze</a>
+  </nav>
+</header>
+
+<section class="section hero">
+  <img src="tua-foto.jpg" alt="Ruben Castellarin">
+  <div class="hero-info">
+    <h2>Contatti</h2>
+    <p><strong>Email:</strong> ruben@email.com</p>
+    <p><strong>Telefono:</strong> +39 333 123 4567</p>
+    <p><strong>Indirizzo:</strong> Via Esempio 12, Verona</p>
+    <blockquote>“Frase d’impatto qui, che riassume la tua visione o passione.”</blockquote>
+  </div>
+</section>
+
+<section class="section" id="esperienze">
+  <h2>Esperienze lavorative</h2>
+  <ul>
+    <li><strong>Backend Developer</strong> – Azienda X (2023–2025)<br>
+        Sviluppo microservizi in Node.js e Python, gestione API REST e database MySQL.</li>
+    <li><strong>Junior Developer</strong> – Azienda Y (2021–2023)<br>
+        Progetti web in JavaScript/React e automazioni in Python.</li>
+    <li><strong>Stage IT</strong> – Azienda Z (2020–2021)<br>
+        Supporto tecnico, query SQL, manutenzione sistemi.</li>
+  </ul>
+</section>
+
+<section class="section" id="formazione">
+  <h2>Formazione</h2>
+  <ul>
+    <li><strong>Laurea triennale in Informatica</strong> – Università di Esempio (2017–2020)</li>
+    <li><strong>Diploma tecnico informatico</strong> – Istituto Superiore (2012–2017)</li>
+  </ul>
+</section>
+
+<section class="section" id="competenze">
+  <h2>Competenze tecniche</h2>
+  <ul>
+    <li>Python, JavaScript, TypeScript, Node.js, React</li>
+    <li>SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</li>
+    <li>Git, GitHub, REST API, Docker, Linux</li>
+    <li>Progetti personali su microservizi e automazioni</li>
+  </ul>
+</section>
+
+<div class="footer">
+  © 2025 Ruben Castellarin • <a href="https://github.com/tuo-username" target="_blank">GitHub</a> • <a href="https://linkedin.com/in/tuo-profilo" target="_blank">LinkedIn</a>
+</div>
+
+</body>
+</html>
