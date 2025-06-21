@@ -16,10 +16,35 @@
         .active-link {
             @apply text-green-400 font-bold;
         }
+        body {
+            background: #0f172a; /* colore scuro */
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+        #light-circle {
+            pointer-events: none; /* così il div non blocca click o hover */
+            position: fixed;
+            top: 0; left: 0;
+            width: 650px; 
+            height: 650px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(15,23,42, 0.5) 0%, transparent 80%);
+            mix-blend-mode: screen; /* fa un effetto di "illuminazione" */
+            transform: translate(-50%, -50%);
+            transition: top 0.1s ease, left 0.1s ease;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+
     </style>
 </head>
 
 <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans">
+    <div id="light-circle"></div>
+
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-900 p-6 hidden lg:flex flex-col justify-start sticky top-0 h-screen">
@@ -32,6 +57,12 @@
                 <p class="text-gray-400 text-sm">[Tuo numero]</p>
                 <p class="text-gray-400 text-sm">[Tua email]</p>
             </div>
+            <!--<nav id="menu" class="mt-10 space-y-2">
+                <a href="#esperienze" class="block transition-transform duration-300 hover:translate-x-4 text-gray-300">Esperienze</a>
+                <a href="#formazione" class="block transition-all duration-300 hover:translate-x-2 text-gray-300">Studi</a>
+                <a href="#competenze" class="block transition-all duration-300 hover:translate-x-2 text-gray-300">Competenze</a>
+            </nav>-->
+
             <nav class="space-y-4 text-sm" id="menu">
                 <a href="#esperienze" class="block text-gray-300 hover:text-green-400" data-link>Esperienze</a>
                 <a href="#formazione" class="block text-gray-300 hover:text-green-400" data-link>Studi</a>
@@ -195,28 +226,61 @@
         const sections = document.querySelectorAll("main section");
         const navLinks = document.querySelectorAll("#menu a");
 
-        function onScroll() {
-            let current = null;
-            const scrollMargin = 150; // margine per migliorare la sensibilità
+        const lightCircle = document.getElementById('light-circle');
 
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= scrollMargin && rect.bottom > scrollMargin) {
-                    current = section.getAttribute("id");
-                }
+            window.addEventListener('mousemove', (e) => {
+                lightCircle.style.top = `${e.clientY}px`;
+                lightCircle.style.left = `${e.clientX}px`;
             });
 
-            navLinks.forEach(link => {
-                link.classList.remove("text-green-400", "font-bold");
-                if (link.getAttribute("href").includes(current)) {
-                    link.classList.add("text-green-400", "font-bold");
-                }
-            });
+        /*let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
+
+        window.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            currentX += (mouseX - currentX) * 1;
+            currentY += (mouseY - currentY) * 1;
+            lightCircle.style.top = `${currentY}px`;
+            lightCircle.style.left = `${currentX}px`;
+            requestAnimationFrame(animate);
         }
+        animate();*/
+
+
+        function onScroll() {
+                const scrollMargin = 150;
+                let closestSection = null;
+                let closestDistance = Infinity;
+
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const distance = Math.abs(rect.top - scrollMargin);
+                    // Prendi la sezione più vicina al punto scrollMargin
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestSection = section;
+                    }
+                });
+
+                const current = closestSection ? closestSection.getAttribute("id") : null;
+
+                navLinks.forEach(link => {
+                    link.classList.remove("text-green-400", "font-bold", "translate-x-4");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("text-green-400", "font-bold", "translate-x-4");
+                    }
+                });
+            }
+
 
         window.addEventListener("scroll", onScroll);
         document.addEventListener("DOMContentLoaded", onScroll); // aggiorna all'inizio
     </script>
+
 </body>
 
 </html>
