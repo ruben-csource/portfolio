@@ -44,6 +44,17 @@
             pointer-events: none;
             z-index: 9999;
         }
+
+        .attivita {
+            margin-bottom: 0.5rem;            /* mt-4 */
+            /*padding: 0.5rem;              
+            border-radius: 0.5rem;      
+            background-color: rgba(39, 39, 42, 0.4); 
+            border: 1px solid #3f3f46;   
+            transition: all 0.2s ease;  
+            */
+        }
+
         .tag {
             font-size: 0.75rem; /* text-xs */
             padding: 0.1rem 0.5rem;
@@ -51,37 +62,51 @@
             border-radius: 0.375rem; /* rounded-md */
             border-width: 1px;
         }
-
-        .tag-js {
-            background-color: #FEF3C7; /* bg-yellow-100 */
-            color: #92400E; /* text-yellow-800 */
-            border-color: #FCD34D; /* border-yellow-300 */
-        }
-
         .tag-angular {
             background-color: #FECACA;
             color: #991B1B;
             border-color: #FCA5A5;
         }
-
-        .tag-sql {
-            background-color: #BFDBFE;
-            color: #1E40AF;
-            border-color: #93C5FD;
-        }
-
         .tag-csharp {
             background-color: #E9D5FF;
             color: #6B21A8;
             border-color: #D8B4FE;
         }
-
+        .tag-git {
+            background-color: #ffffff00;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        .tag-js {
+            background-color: #FEF3C7; /* bg-yellow-100 */
+            color: #92400E; /* text-yellow-800 */
+            border-color: #FCD34D; /* border-yellow-300 */
+        }
+        .tag-node {
+            background-color: #daffd5;
+            color: #21a828;
+            border-color: #b4febb;
+        }
+        .tag-office {
+            background-color: #ffe6d5;
+            color: #a85221;
+            border-color: #fed9b4;
+        }
+        .tag-php {
+            background-color: #E9D5FF;
+            color: #6B21A8;
+            border-color: #D8B4FE;
+        }
         .tag-python {
             background-color: #BFDBFE;
             color: #1E40AF;
             border-color: #93C5FD;
         }
-
+        .tag-sql {
+            background-color: #BFDBFE;
+            color: #1E40AF;
+            border-color: #93C5FD;
+        }
     </style>
 </head>
 
@@ -104,6 +129,9 @@
                 <a href="#esperienze" class="block text-gray-300 hover:text-green-400" data-link>Esperienze</a>
                 <a href="#formazione" class="block text-gray-300 hover:text-green-400" data-link>Formazione</a>
                 <a href="#competenze" class="block text-gray-300 hover:text-green-400" data-link>Competenze</a>
+                <a href="./docs/CV_Ruben_Castellarin.pdf" download class="block text-blue-500 hover:underline">
+                    Scarica il mio CV
+                </a>
             </nav>
             <section id="social" class="mt-12 flex gap-6 items-center">
                 <a href="https://www.linkedin.com/in/ruben-castellarin-7775ba159/" target="_blank"
@@ -121,12 +149,11 @@
                 <a href="https://www.instagram.com/tuonome" target="_blank" aria-label="Instagram">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-500 hover:text-pink-400 transition-transform transform hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM4.5 7.75A3.25 3.25 0 0 1 7.75 4.5h8.5A3.25 3.25 0 0 1 19.5 7.75v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5A3.25 3.25 0 0 1 4.5 16.25v-8.5zm7.5 1.5a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zm0 1.5a2.75 2.75 0 1 1 0 5.5 2.75 2.75 0 0 1 0-5.5zm5.25-.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0z"/></svg>
                 </a>-->
-            </section>
-
+            </section> 
         </aside>
 
         <!-- Main content -->
-        <main class="flex-1 p-8 space-y-20">
+        <main class="flex-1 p-8 space-y-10">
             <header id="home">
                 <p class="text-green-400 text-sm mb-2">Ciao! Sono</p>
                 <h1 class="text-5xl font-bold mb-4">Ruben Castellarin</h1>
@@ -143,106 +170,111 @@
                     <li>
                         <h3 class="text-xl font-bold text-green-400">Sviluppatore/System integrator - Aquadb Srl</h3>
                         <p class="text-gray-400">Luglio 2021 - Presente</p>
-                        <p class="text-gray-300">
-                            
-                        <div>
+                        <p class="text-gray-300">   
+                        <div class="attivita">
                             <p>Query in SQL e script in PL/SQL per dashboard (Business Intelligence) ed elaborazione dati in ambienti MES.</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
+                            <div>
                                 <span class="tag tag-sql">SQL</span>
                                 <span class="tag tag-sql">PL/SQL</span>
                             </div>
                         </div>
-                        <div>
+                        <div class="attivita">
                             <p>Pagine web in Python con Flask, html+css+javascript+AJAX. Form interattivo per inviare chiamate ad una web service per
                             inserimento ed interrogazione dati su un DB SQL Oracle.</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
+                            <div>
                                 <span class="tag tag-python">Python</span>
                                 <span class="tag tag-python">Flask</span>
                                 <span class="tag tag-js">Javascript</span>
                                 <span class="tag tag-js">Ajax</span>
                             </div>
                         </div>
-                        <div>
+                        <div class="attivita">
                             <p>Dashboard in Angular (con componenti Kendo UI) con aggiornamento dati in tempo reale e invio dei suddetti dati ad una
                             Web Service.</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
+                            <div>
                                 <span class="tag tag-js">Javascript</span>
                                 <span class="tag tag-angular">Angular</span>
                                 <span class="tag tag-angular">KendoUI</span>
                             </div>
                         </div>
-                        <div>
+                        <div class="attivita">
                             <p>Web Services in C# per inserimento dati su database SQL.</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
+                            <div>
                                 <span class="tag tag-csharp">C#</span>
                                 <span class="tag tag-sql">SQL</span>
                             </div>
                         </div>
-                        <div>
+                        <div class="attivita">
                             <p>Connettori in C# per connessione ad API e Web Services per interrogazione ed inserimento dati in un DB SQL Oracle.</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="tag tag-csharp">C#</span>
-                                <span class="tag tag-sql">SQL</span>
-                            </div>
+                                <div>
+                                    <span class="tag tag-csharp">C#</span>
+                                    <span class="tag tag-sql">SQL</span>
+                                </div>
+                        </div>
                     </li>
                     <li>
                         <h3 class="text-xl font-bold text-green-400">Caporedattore - Progetto per Università degli Studi
                             di Udine</h3>
                         <p class="text-gray-400">Giugno 2020 - Dicembre 2021</p>
-                        <p class="text-gray-300">Gestione di una rivista online studentesca, tramite la piattaforma
-                            WordPress.org</p>
+                        <div class="attivita">
+                            <p class="text-gray-300">Gestione di una rivista online studentesca, tramite la piattaforma
+                                WordPress.org</p>
+                            <div>
+                                <span class="tag tag-sql">MySQL</span>
+                                <span class="tag tag-js">Javascript</span>
+                                <span class="tag tag-php">PHP</span>
+                                <span class="tag tag-sql">Wordpress</span>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <h3 class="text-xl font-bold text-green-400">Servizio Civile Universale - Pro Casarsa della
                             Delizia e ufficio turistico</h3>
                         <p class="text-gray-400">Febbraio 2020 - Febbraio 2021</p>
-                        <p class="text-gray-300">
-                            Segreteria e front office, organizzazione eventi e gestione prenotazioni, creazione di un sito web per
-                            la Pro Loco di Casarsa.
-                        </p>
+                        <div class="attivita">
+                            <p class="text-gray-300">
+                                Segreteria e front office, organizzazione eventi e gestione prenotazioni, creazione di un sito web per
+                                la Pro Loco di Casarsa.
+                            </p>
+                            <div>
+                                <span class="tag tag-js">Javascript</span>
+                                <span class="tag tag-git">Git</span>
+                                <span class="tag tag-office">Office</span>
+                            </div>
+                        </div>
                     </li>
             </section>
 
             <section id="formazione">
                 <h2 class="text-3xl font-semibold mb-6">Formazione</h2>
-                <p class="text-xl text-green-400 font-bold mb-4">Studi</p>
-                <p class="text-gray-300 mb-6">Laurea in Scienze e Tecnologie Multimediali - Università degli Studi di Udine (2019 - presente)</p>
+                <ul class="space-y-6">
                 <li>
-                    <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
-                    <p class="text-gray-400">Gennaio 2023 - Presente</p>
-                    <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
-                        nuove architetture.</p>
+                    <h3 class="text-xl font-bold text-green-400">Laurea in Scienze e Tecnologie Multimediali - Università degli Studi di Udine
+                    </h3>
+                    <p class="text-gray-400">2019 - Presente</p>
+                    <div>
+                        <p>Programmazione JavaScript, CSS, PHP, NodeJS</p>
+                        <div>
+                            <span class="tag tag-js">Javascript</span>
+                            <span class="tag tag-php">PHP</span>
+                            <span class="tag tag-node">Node</span>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
-                    <p class="text-gray-400">2021 - 2022</p>
-                    <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
-                        database SQL/NoSQL.</p>
-                </li>
-                <li>
-                    <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
-                    <p class="text-gray-400">2019 - 2021</p>
-                    <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
-                        manutenzione applicativi aziendali.</p>
-                </li>
-                <p class="text-gray-300 mb-6">Diploma di maturità in Relazioni Internazionali per il Marketing - ITC Paolo Sarpi (2017)</p>
-                <li>
-                    <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
-                    <p class="text-gray-400">Gennaio 2023 - Presente</p>
-                    <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
-                        nuove architetture.</p>
-                </li>
-                <li>
-                    <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
-                    <p class="text-gray-400">2021 - 2022</p>
-                    <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
-                        database SQL/NoSQL.</p>
-                </li>
-                <li>
-                    <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
-                    <p class="text-gray-400">2019 - 2021</p>
-                    <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
-                        manutenzione applicativi aziendali.</p>
+                    <h3 class="text-xl font-bold text-green-400">Diploma di maturità in Relazioni Internazionali per il Marketing - ITC Paolo Sarpi
+                    </h3>
+                    <p class="text-gray-400">2012 - 2017</p>
+                    <div>
+                        <p>Lingua inglese - livello C1</p>
+                        <p>Lingua spagnola - madrelingua</p>
+                        <p>Lingua francese - base</p>
+                        <p>Contabilità e data entry (Excel, Word)</p>
+                        <div>
+                            <span class="tag tag-node">Excel</span>
+                            <span class="tag tag-csharp">Word</span>
+                        </div>
+                    </div>
                 </li>
             </section>
 
