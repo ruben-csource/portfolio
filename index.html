@@ -392,6 +392,10 @@
 
         window.addEventListener("scroll", onScroll);
         document.addEventListener("DOMContentLoaded", onScroll); // aggiorna all'inizio
+
+        window.addEventListener("pageshow", function () {
+            window.scrollTo(0, 0);
+        });
     </script>
 
 </body>
