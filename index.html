@@ -45,14 +45,22 @@
             z-index: 9999;
         }
 
+        .esperienzaLav{
+            padding: 0.5rem;
+        }
+        .esperienzaLav:hover{
+            padding: 0.5rem;
+            background-color: #0f172a; 
+            border-color: #0f172a; 
+            border-radius: 8px;
+            box-shadow:
+                1px 1px 5px rgba(0,0,0,0.8),
+                -1px -1px 5px rgba(255,255,255,0.4);
+            cursor: pointer;
+        }
+
         .attivita {
-            margin-bottom: 0.5rem;            /* mt-4 */
-            /*padding: 0.5rem;              
-            border-radius: 0.5rem;      
-            background-color: rgba(39, 39, 42, 0.4); 
-            border: 1px solid #3f3f46;   
-            transition: all 0.2s ease;  
-            */
+            margin-bottom: 0.5rem;          /* mt-4 */
         }
 
         .tag {
@@ -129,7 +137,7 @@
                 <a href="#esperienze" class="block text-gray-300 hover:text-green-400" data-link>Esperienze</a>
                 <a href="#formazione" class="block text-gray-300 hover:text-green-400" data-link>Formazione</a>
                 <a href="#competenze" class="block text-gray-300 hover:text-green-400" data-link>Competenze</a>
-                <a href="./docs/cv_castellarin_ruben_2025.pdf" download class="block text-blue-500 hover:underline">
+                <a href="./docs/CV_Ruben_Castellarin.pdf" download class="block text-blue-500 hover:underline">
                     Scarica il mio CV
                 </a>
             </nav>
@@ -166,8 +174,8 @@
 
             <section id="esperienze">
                 <h2 class="text-3xl font-semibold mb-6">Principali esperienze Lavorative</h2>
-                <ul class="space-y-6">
-                    <li>
+                <ul class="space-y-0.5">
+                    <li class="esperienzaLav" onclick="window.open('https://www.aquadb.eu/', '_blank')">
                         <h3 class="text-xl font-bold text-green-400">Sviluppatore/System integrator - Aquadb Srl</h3>
                         <p class="text-gray-400">Luglio 2021 - Presente</p>
                         <p class="text-gray-300">   
@@ -212,9 +220,8 @@
                                 </div>
                         </div>
                     </li>
-                    <li>
-                        <h3 class="text-xl font-bold text-green-400">Caporedattore - Progetto per Università degli Studi
-                            di Udine</h3>
+                    <li class="esperienzaLav" onclick="window.open('https://stuzine.uniud.it/', '_blank')">
+                        <h3 class="text-xl font-bold text-green-400">Caporedattore - Stuzine</h3>
                         <p class="text-gray-400">Giugno 2020 - Dicembre 2021</p>
                         <div class="attivita">
                             <p class="text-gray-300">Gestione di una rivista online studentesca, tramite la piattaforma
@@ -227,13 +234,13 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="esperienzaLav" onclick="window.open('https://artecasarsa.github.io/', '_blank')">
                         <h3 class="text-xl font-bold text-green-400">Servizio Civile Universale - Pro Casarsa della
                             Delizia e ufficio turistico</h3>
                         <p class="text-gray-400">Febbraio 2020 - Febbraio 2021</p>
                         <div class="attivita">
                             <p class="text-gray-300">
-                                Segreteria e front office, organizzazione eventi e gestione prenotazioni, creazione di un sito web per
+                                Segreteria e front office, organizzazione eventi e gestione prenotazioni, sviluppo di un sito web per
                                 la Pro Loco di Casarsa.
                             </p>
                             <div>
@@ -272,7 +279,7 @@
                         <p>Contabilità e data entry (Excel, Word)</p>
                         <div>
                             <span class="tag tag-node">Excel</span>
-                            <span class="tag tag-sql">Word</span>
+                            <span class="tag tag-csharp">Word</span>
                         </div>
                     </div>
                 </li>
@@ -281,49 +288,69 @@
             <section id="competenze">
                 <h2 class="text-3xl font-semibold mb-6">Competenze Tecniche</h2>
                 <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-gray-300">
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>TypeScript</li>
-                    <li>Node.js</li>
-                    <li>React</li>
-                    <li>SQL / PL-SQL</li>
-                    <li>MongoDB</li>
-                    <li>Docker</li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
-                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
-                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
-                            nuove architetture.</p>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppo Full Stack - Aquadb Srl</h3>
+                        <p class="text-gray-400">2024 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di pagine web per inserimento e consultazione dati. Interfacciamento con Web Services SOAP e
+                            database SQL.</p>
+                        <div>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-python">Flask</span>
+                            <span class="tag tag-js">Javascript</span>
+                            <span class="tag tag-sql">SQL</span>
+                        </div>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
-                        <p class="text-gray-400">2021 - 2022</p>
-                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
-                            database SQL/NoSQL.</p>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppo Full Stack - Pro Casarsa della Delizia</h3>
+                        <p class="text-gray-400">2021</p>
+                        <p class="text-gray-300">Sviluppo di una pagina web informativa per promuovere il patrimonio turistico locale.</p>
+                        <span class="tag tag-js">Javascript</span>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
-                        <p class="text-gray-400">2019 - 2021</p>
-                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
-                            manutenzione applicativi aziendali.</p>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppo PL/SQL</h3>
+                        <p class="text-gray-400">2021 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di script e procedure in PL/SQL per elaborazione dati.</p>
+                        <span class="tag tag-sql">SQL</span>
+                        <span class="tag tag-sql">PL/SQL</span>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
-                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
-                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
-                            nuove architetture.</p>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppo Frontend - Aquadb Srl</h3>
+                        <p class="text-gray-400">2024 - Presente</p>
+                        <p class="text-gray-300">Sviluppo pagine web per visualizzazione dati su dashboard web dal database SQL.</p>
+                        <span class="tag tag-js">Javascript</span>
+                        <span class="tag tag-angular">Angular</span>
+                        <span class="tag tag-sql">SQL</span>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
-                        <p class="text-gray-400">2021 - 2022</p>
-                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
-                            database SQL/NoSQL.</p>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppo query SQL - Integrazione Sistemi - Aquadb Srl</h3>
+                        <p class="text-gray-400">2021 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di query su DB SQL per elaborazione dati e visualizzazione su dashboards web.</p>
+                        <span class="tag tag-sql">SQL</span>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
-                        <p class="text-gray-400">2019 - 2021</p>
-                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
-                            manutenzione applicativi aziendali.</p>
+                        <h3 class="text-xl font-bold text-green-400">Backend Developer - Aquadb Srl</h3>
+                        <p class="text-gray-400">2023 - 2024</p>
+                        <p class="text-gray-300">Sviluppo Web Services (SOAP) e connettori in C#. Interfacciamento con
+                            database SQL e Web Services REST.</p>
+                        <span class="tag tag-csharp">C#</span>
+                        <span class="tag tag-sql">SQL</span>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Db Admisistrator - Aquadb Srl</h3>
+                        <p class="text-gray-400">2021 - Presente</p>
+                        <p class="text-gray-300">Gestione DB: creazione, modifica, cancellazione, importazione ed esportazione database, tabelle ed utenti (Oracle, SQL Server, MySql)
+                        Efficientamento delle prestazioni (Oracle)</p>
+                        <span class="tag tag-angular">Oracle</span>
+                        <span class="tag tag-sql">SQL Server</span>
+                        <span class="tag tag-git">MySql</span>
+                        <span class="tag tag-sql">SQL</span>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Progetti universitari/personali</h3>
+                        <p class="text-gray-400">2019 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di server e piccole API REST in Node. Gestione sessioni utente, interazione con database S3 (AWS) in PHP.</p>
+                        <span class="tag tag-node">Node</span>
+                        <span class="tag tag-php">PHP</span>
                     </li>
                 </ul>
 
@@ -345,24 +372,6 @@
             lightCircle.style.top = `${e.clientY}px`;
             lightCircle.style.left = `${e.clientX}px`;
         });
-
-        /*let mouseX = 0, mouseY = 0;
-        let currentX = 0, currentY = 0;
-
-        window.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animate() {
-            currentX += (mouseX - currentX) * 1;
-            currentY += (mouseY - currentY) * 1;
-            lightCircle.style.top = `${currentY}px`;
-            lightCircle.style.left = `${currentX}px`;
-            requestAnimationFrame(animate);
-        }
-        animate();*/
-
 
         function onScroll() {
             const scrollMargin = 150;
@@ -394,8 +403,8 @@
         document.addEventListener("DOMContentLoaded", onScroll); // aggiorna all'inizio
 
         window.addEventListener("pageshow", function () {
-            window.scrollTo(0, 0);
-        });
+                window.scrollTo(0, 0);
+            });
     </script>
 
 </body>
