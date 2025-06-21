@@ -1,201 +1,81 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ruben Castellarin - Curriculum</title>
-  <style>
-    :root {
-      --accent: #0077cc;
-      --bg-start: #f0f4ff;
-      --bg-end: #eafaf1;
-      --text: #1d1d1d;
-      --card: white;
-      --border: #ccc;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruben Castellarin - Curriculum</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans">
+    <header class="min-h-screen flex flex-col justify-center items-start px-10 sm:px-20" id="home">
+      <p class="text-green-400 text-sm mb-2">Ciao, mi chiamo</p>
+      <h1 class="text-5xl font-bold mb-4">Ruben Castellarin</h1>
+      <h2 class="text-2xl text-gray-400 mb-6">Backend & Full Stack Developer</h2>
+      <p class="max-w-xl text-gray-300 mb-10">"Sviluppo soluzioni pratiche con un occhio alla pulizia del codice e alla scalabilità. Credo nella potenza dell'apprendimento continuo e della condivisione delle competenze."</p>
+      <a href="#esperienze" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Scopri di più</a>
+    </header>
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <section class="px-10 sm:px-20 py-16 bg-gray-900" id="presentazione">
+      <h2 class="text-3xl font-semibold mb-6">Chi sono</h2>
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <img src="tuafoto.jpg" alt="Ruben Castellarin" class="w-48 h-48 object-cover rounded-full border-4 border-green-400" />
+        <div class="max-w-2xl">
+          <p class="text-gray-300 mb-2"><strong>Indirizzo:</strong> [Tuo indirizzo]</p>
+          <p class="text-gray-300 mb-2"><strong>Telefono:</strong> [Tuo numero]</p>
+          <p class="text-gray-300 mb-2"><strong>Email:</strong> [Tua email]</p>
+          <p class="text-gray-300">Sviluppatore backend con esperienza in Python, Node.js e TypeScript. Appassionato di musica, elettronica, fotografia e sviluppo software.</p>
+        </div>
+      </div>
+    </section>
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
-      color: var(--text);
-    }
+    <section class="px-10 sm:px-20 py-16 bg-gray-800" id="esperienze">
+      <h2 class="text-3xl font-semibold mb-6">Esperienze Lavorative</h2>
+      <ul class="space-y-6">
+        <li>
+          <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+          <p class="text-gray-400">Gennaio 2023 - Presente</p>
+          <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con nuove architetture.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+          <p class="text-gray-400">2021 - 2022</p>
+          <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con database SQL/NoSQL.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+          <p class="text-gray-400">2019 - 2021</p>
+          <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la manutenzione applicativi aziendali.</p>
+        </li>
+      </ul>
+    </section>
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(10px);
-      z-index: 10;
-    }
+    <section class="px-10 sm:px-20 py-16 bg-gray-900" id="formazione">
+      <h2 class="text-3xl font-semibold mb-6">Formazione e Competenze</h2>
+      <p class="text-xl text-green-400 font-bold mb-4">Studi</p>
+      <p class="text-gray-300 mb-6">Laurea in Informatica - Università XYZ (2015 - 2018)</p>
+      <p class="text-xl text-green-400 font-bold mb-4">Competenze Tecniche</p>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-gray-300">
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>Node.js</li>
+        <li>React</li>
+        <li>SQL / PL-SQL</li>
+        <li>MongoDB</li>
+        <li>Docker</li>
+      </ul>
+    </section>
 
-    header h1 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
+    <footer class="px-10 sm:px-20 py-10 bg-gray-800 text-center">
+      <p class="text-gray-500">&copy; 2025 Ruben Castellarin. Tutti i diritti riservati.</p>
+    </footer>
 
-    nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.6s ease;
-    }
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .hero img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent);
-    }
-
-    .hero-info {
-      flex: 1;
-    }
-
-    h2 {
-      color: var(--accent);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-info {
-        text-align: center;
-      }
-
-      nav {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Ruben Castellarin</h1>
-  <nav>
-    <a href="#esperienze">Esperienze</a>
-    <a href="#formazione">Studi</a>
-    <a href="#competenze">Competenze</a>
-  </nav>
-</header>
-
-<section class="section hero">
-  <img src="tua-foto.jpg" alt="Ruben Castellarin">
-  <div class="hero-info">
-    <h2>Contatti</h2>
-    <p><strong>Email:</strong> ruben@email.com</p>
-    <p><strong>Telefono:</strong> +39 333 123 4567</p>
-    <p><strong>Indirizzo:</strong> Via Esempio 12, Verona</p>
-    <blockquote>“Frase d’impatto qui, che riassume la tua visione o passione.”</blockquote>
-  </div>
-</section>
-
-<section class="section" id="esperienze">
-  <h2>Esperienze lavorative</h2>
-  <ul>
-    <li><strong>Backend Developer</strong> – Azienda X (2023–2025)<br>
-        Sviluppo microservizi in Node.js e Python, gestione API REST e database MySQL.</li>
-    <li><strong>Junior Developer</strong> – Azienda Y (2021–2023)<br>
-        Progetti web in JavaScript/React e automazioni in Python.</li>
-    <li><strong>Stage IT</strong> – Azienda Z (2020–2021)<br>
-        Supporto tecnico, query SQL, manutenzione sistemi.</li>
-  </ul>
-</section>
-
-<section class="section" id="formazione">
-  <h2>Formazione</h2>
-  <ul>
-    <li><strong>Laurea triennale in Informatica</strong> – Università di Esempio (2017–2020)</li>
-    <li><strong>Diploma tecnico informatico</strong> – Istituto Superiore (2012–2017)</li>
-  </ul>
-</section>
-
-<section class="section" id="competenze">
-  <h2>Competenze tecniche</h2>
-  <ul>
-    <li>Python, JavaScript, TypeScript, Node.js, React</li>
-    <li>SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</li>
-    <li>Git, GitHub, REST API, Docker, Linux</li>
-    <li>Progetti personali su microservizi e automazioni</li>
-  </ul>
-</section>
-
-<div class="footer">
-  © 2025 Ruben Castellarin • <a href="https://github.com/tuo-username" target="_blank">GitHub</a> • <a href="https://linkedin.com/in/tuo-profilo" target="_blank">LinkedIn</a>
-</div>
-
-<script>
-  // Appare le sezioni al momento giusto mentre scorri
-  const sections = document.querySelectorAll('.section');
-
-  const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(sec => {
-      const boxTop = sec.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) {
-        sec.classList.add('visible');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-</script>
-
-</body>
+    <script>
+      ScrollReveal().reveal('header', { delay: 300, origin: 'left', distance: '50px', duration: 800 });
+      ScrollReveal().reveal('#presentazione', { delay: 400, origin: 'bottom', distance: '30px', duration: 800 });
+      ScrollReveal().reveal('#esperienze li', { interval: 200, origin: 'bottom', distance: '20px', duration: 600 });
+      ScrollReveal().reveal('#formazione', { delay: 400, origin: 'right', distance: '40px', duration: 800 });
+    </script>
+  </body>
 </html>
