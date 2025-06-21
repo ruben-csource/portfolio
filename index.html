@@ -16,29 +16,33 @@
         .active-link {
             @apply text-green-400 font-bold;
         }
+
         body {
-            background: #0f172a; /* colore scuro */
+            background: #0f172a;
+            /* colore scuro */
             position: relative;
             overflow-x: hidden;
             min-height: 100vh;
             transition: background 0.3s ease;
         }
+
         #light-circle {
-            pointer-events: none; /* così il div non blocca click o hover */
+            pointer-events: none;
+            /* così il div non blocca click o hover */
             position: fixed;
-            top: 0; left: 0;
-            width: 650px; 
+            top: 0;
+            left: 0;
+            width: 650px;
             height: 650px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(15,23,42, 0.5) 0%, transparent 80%);
-            mix-blend-mode: screen; /* fa un effetto di "illuminazione" */
+            background: radial-gradient(circle, rgba(15, 23, 42, 0.5) 0%, transparent 80%);
+            mix-blend-mode: screen;
+            /* fa un effetto di "illuminazione" */
             transform: translate(-50%, -50%);
             transition: top 0.1s ease, left 0.1s ease;
             pointer-events: none;
             z-index: 9999;
         }
-
-
     </style>
 </head>
 
@@ -49,10 +53,9 @@
         <!-- Sidebar -->
         <aside class="w-80 bg-gray-900 p-6 hidden lg:flex flex-col justify-start sticky top-0 h-screen">
             <div class="flex flex-col items-center mb-10">
-                <img src="./img/Ruben_CV.jpg" alt="Ruben Castellarin"
-                    class="w-36 h-36 object-cover rounded-full" />
+                <img src="./img/Ruben_CV.jpg" alt="Ruben Castellarin" class="w-36 h-36 object-cover rounded-full" />
                 <h1 class="mt-4 text-xl font-bold">Ruben Castellarin</h1>
-                <p class="text-gray-400 text-sm">System Integrator - Programmatore</p>
+                <!--<p class="text-gray-400 text-sm">System Integrator - Programmatore</p>-->
                 <p class="text-gray-400 text-sm">Via Versutta 44</p>
                 <p class="text-gray-400 text-sm">Casarsa della Delizia 33072 PN</p>
                 <p class="text-gray-400 text-sm">+39 3401696283</p>
@@ -64,8 +67,14 @@
                 <a href="#competenze" class="block text-gray-300 hover:text-green-400" data-link>Competenze</a>
             </nav>
             <section id="social" class="mt-12 flex gap-6 items-center">
-                <a href="https://www.linkedin.com/in/ruben-castellarin-7775ba159/" target="_blank" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500 hover:text-blue-400 transition-transform transform hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.09H4.7V24H.22zM8.13 8.09h4.28v2.17h.06c.6-1.14 2.06-2.35 4.23-2.35 4.52 0 5.35 2.98 5.35 6.85V24h-4.48v-8.3c0-1.98-.04-4.52-2.75-4.52-2.75 0-3.17 2.14-3.17 4.37V24H8.13z"/></svg>
+                <a href="https://www.linkedin.com/in/ruben-castellarin-7775ba159/" target="_blank"
+                    aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-blue-500 hover:text-blue-400 transition-transform transform hover:scale-110"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.09H4.7V24H.22zM8.13 8.09h4.28v2.17h.06c.6-1.14 2.06-2.35 4.23-2.35 4.52 0 5.35 2.98 5.35 6.85V24h-4.48v-8.3c0-1.98-.04-4.52-2.75-4.52-2.75 0-3.17 2.14-3.17 4.37V24H8.13z" />
+                    </svg>
                 </a>
                 <!--<a href="https://github.com/tuonome" target="_blank" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white hover:text-gray-300 transition-transform transform hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.3 9.42 7.9 10.96.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2.01-3.21.7-3.89-1.55-3.89-1.55-.53-1.35-1.29-1.71-1.29-1.71-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.2-1.5 3.18-1.18 3.18-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.75-.01 3.12 0 .31.2.68.8.56A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
@@ -80,13 +89,13 @@
         <!-- Main content -->
         <main class="flex-1 p-8 space-y-20">
             <header id="home">
-                <p class="text-green-400 text-sm mb-2">Ciao, mi chiamo</p>
+                <p class="text-green-400 text-sm mb-2">Ciao! Sono</p>
                 <h1 class="text-5xl font-bold mb-4">Ruben Castellarin</h1>
-                <h2 class="text-2xl text-gray-400 mb-6">Backend & Full Stack Developer</h2>
-                <p class="text-gray-300 mb-10">Lavoro come sviluppatore e system integrator in una piccola azienda di consulenza e
-                personalizzazione di programmi gestionali. 
-                <br>Nel corso degli anni ho maturato esperienza nei settori che più mi appassionano: 
-                lo sviluppo front end e back end, e la gestione di siti e altri tipi di applicativi web.</p>
+                <h2 class="text-2xl text-gray-400 mb-6">System Integrator - Sviluppatore Web</h2>
+                <p class="text-gray-300 mb-10">Lavoro come sviluppatore e system integrator in una piccola azienda di
+                    consulenza e personalizzazione di programmi gestionali.
+                    <br>Nel corso degli anni ho maturato esperienza nei settori che più mi appassionano: lo sviluppo front end e back end, e la gestione di siti e altri tipi di applicativi web.
+                </p>
             </header>
 
             <section id="esperienze">
@@ -96,33 +105,61 @@
                         <h3 class="text-xl font-bold text-green-400">Sviluppatore/System integrator - Aquadb Srl</h3>
                         <p class="text-gray-400">Luglio 2021 - Presente</p>
                         <p class="text-gray-300">
-                            Sviluppo di query in SQL e script in PL/SQL per dashboard (Business Intelligence) ed elaborazione dati
-                            in ambienti MES.
-                            <br>
-                            Sviluppo di Web Services in C# per scrittura di dati su database SQL
-                            <br>
-                            Sviluppo di connettori in C# per connessione ad API e Web Services 
-                        </p>
+                            
+                        <div>
+                            <p>Query in SQL e script in PL/SQL per dashboard (Business Intelligence) edelaborazione dati in ambienti MES.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-blue-100 border border-blue-300 text-blue-800 text-xs px-2 py-1 rounded-md">SQL</span>
+                                <span class="bg-blue-100 border border-blue-300 text-blue-800 text-xs px-2 py-1 rounded-md">PL/SQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Pagine web in Python con Flask, html+css+javascript+AJAX. Form interattivo per inviare chiamate ad una web service per
+                            inserimento ed interrogazione dati su un DB SQL Oracle.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-blue-100 border border-blue-300 text-blue-800 text-xs px-2 py-1 rounded-md">python</span>
+                                <span class="bg-blue-100 border border-blue-300 text-blue-800 text-xs px-2 py-1 rounded-md">flask</span>
+                                <span class="bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-2 py-1 rounded-md">javascript</span>
+                                <span class="bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-2 py-1 rounded-md">ajax</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Dashboard in Angular (con componenti Kendo UI) con aggiornamento dati in tempo reale e invio dei suddetti dati ad una
+                            Web Service.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-2 py-1 rounded-md">javascript</span>
+                                <span class="bg-red-100 border border-red-300 text-red-800 text-xs px-2 py-1 rounded-md">angular</span>
+                                <span class="bg-red-100 border border-red-300 text-red-800 text-xs px-2 py-1 rounded-md">kendoUI</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Web Services in C# per inserimento dati su database SQL.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-purple-100 border border-purple-300 text-purple-800 text-xs px-2 py-1 rounded-md">C#</span>
+                                <span class="bg-blue-100 border border-blue-300 text-blue-800 text-xs px-2 py-1 rounded-md">SQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Connettori in C# per connessione ad API e Web Services per interrogazione ed inserimento dati in un DB SQL Oracle.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-purple-100 border border-purple-300 text-purple-800 text-xs px-2 py-1 rounded-md">C#</span>
+                                <span class="bg-blue-100 border border-blue-300 text-blue-800 text-xs px-2 py-1 rounded-md">SQL</span>
+                            </div>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Caporedattore - Progetto per Università degli Studi di Udine</h3>
+                        <h3 class="text-xl font-bold text-green-400">Caporedattore - Progetto per Università degli Studi
+                            di Udine</h3>
                         <p class="text-gray-400">Giugno 2020 - Dicembre 2021</p>
-                        <p class="text-gray-300">Gestione di una rivista online studentesca, tramite la piattaforma WordPress.org</p>
+                        <p class="text-gray-300">Gestione di una rivista online studentesca, tramite la piattaforma
+                            WordPress.org</p>
                     </li>
                     <li>
-                        <h3 class="text-xl font-bold text-green-400">Servizio Civile Universale - Pro Casarsa della Delizia e ufficio turistico</h3>
+                        <h3 class="text-xl font-bold text-green-400">Servizio Civile Universale - Pro Casarsa della
+                            Delizia e ufficio turistico</h3>
                         <p class="text-gray-400">Febbraio 2020 - Febbraio 2021</p>
                         <p class="text-gray-300">
                             Automazione processi interni con Python. Supporto al team IT per la
                             manutenzione applicativi aziendali.
-                        </p>
-                    </li>
-                    <li>
-                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
-                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
-                        <p class="text-gray-300">
-                            Segreteria e front office, organizzazione eventi e gestione prenotazioni, creazione di un sito web per la 
-                            Pro Loco di Casarsa.
                         </p>
                     </li>
             </section>
@@ -199,7 +236,7 @@
                             manutenzione applicativi aziendali.</p>
                     </li>
                 </ul>
-                
+
             </section>
 
             <footer class="py-10 text-center">
@@ -214,10 +251,10 @@
 
         const lightCircle = document.getElementById('light-circle');
 
-            window.addEventListener('mousemove', (e) => {
-                lightCircle.style.top = `${e.clientY}px`;
-                lightCircle.style.left = `${e.clientX}px`;
-            });
+        window.addEventListener('mousemove', (e) => {
+            lightCircle.style.top = `${e.clientY}px`;
+            lightCircle.style.left = `${e.clientX}px`;
+        });
 
         /*let mouseX = 0, mouseY = 0;
         let currentX = 0, currentY = 0;
@@ -238,29 +275,29 @@
 
 
         function onScroll() {
-                const scrollMargin = 150;
-                let closestSection = null;
-                let closestDistance = Infinity;
+            const scrollMargin = 150;
+            let closestSection = null;
+            let closestDistance = Infinity;
 
-                sections.forEach(section => {
-                    const rect = section.getBoundingClientRect();
-                    const distance = Math.abs(rect.top - scrollMargin);
-                    // Prendi la sezione più vicina al punto scrollMargin
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        closestSection = section;
-                    }
-                });
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const distance = Math.abs(rect.top - scrollMargin);
+                // Prendi la sezione più vicina al punto scrollMargin
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestSection = section;
+                }
+            });
 
-                const current = closestSection ? closestSection.getAttribute("id") : null;
+            const current = closestSection ? closestSection.getAttribute("id") : null;
 
-                navLinks.forEach(link => {
-                    link.classList.remove("text-green-400", "font-bold", "translate-x-4");
-                    if (link.getAttribute("href").includes(current)) {
-                        link.classList.add("text-green-400", "font-bold", "translate-x-4");
-                    }
-                });
-            }
+            navLinks.forEach(link => {
+                link.classList.remove("text-green-400", "font-bold", "translate-x-4");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("text-green-400", "font-bold", "translate-x-4");
+                }
+            });
+        }
 
 
         window.addEventListener("scroll", onScroll);
