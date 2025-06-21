@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ruben Castellarin - Curriculum</title>
@@ -8,111 +9,214 @@
     <script src="https://unpkg.com/alpinejs" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .active-link {
-        @apply text-green-400 font-bold;
-      }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .active-link {
+            @apply text-green-400 font-bold;
+        }
     </style>
-  </head>
-  <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans">
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans">
     <div class="flex min-h-screen">
-      <!-- Sidebar -->
-      <aside class="w-64 bg-gray-900 p-6 hidden lg:flex flex-col justify-start sticky top-0 h-screen">
-        <div class="flex flex-col items-center mb-10">
-          <img src="tuafoto.jpg" alt="Ruben Castellarin" class="w-24 h-24 object-cover rounded-full border-4 border-green-400" />
-          <h1 class="mt-4 text-xl font-bold">Ruben Castellarin</h1>
-          <p class="text-gray-400 text-sm">Backend & Full Stack Developer</p>
-          <p class="text-gray-400 text-sm">[Tuo indirizzo]</p>
-          <p class="text-gray-400 text-sm">[Tuo numero]</p>
-          <p class="text-gray-400 text-sm">[Tua email]</p>
-        </div>
-        <nav class="space-y-4 text-sm" id="menu">
-          <a href="#esperienze" class="block text-gray-300 hover:text-green-400" data-link>Esperienze</a>
-          <a href="#formazione" class="block text-gray-300 hover:text-green-400" data-link>Studi</a>
-          <a href="#competenze" class="block text-gray-300 hover:text-green-400" data-link>Competenze</a>
-        </nav>
-      </aside>
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-900 p-6 hidden lg:flex flex-col justify-start sticky top-0 h-screen">
+            <div class="flex flex-col items-center mb-10">
+                <img src="tuafoto.jpg" alt="Ruben Castellarin"
+                    class="w-24 h-24 object-cover rounded-full border-4 border-green-400" />
+                <h1 class="mt-4 text-xl font-bold">Ruben Castellarin</h1>
+                <p class="text-gray-400 text-sm">Backend & Full Stack Developer</p>
+                <p class="text-gray-400 text-sm">[Tuo indirizzo]</p>
+                <p class="text-gray-400 text-sm">[Tuo numero]</p>
+                <p class="text-gray-400 text-sm">[Tua email]</p>
+            </div>
+            <nav class="space-y-4 text-sm" id="menu">
+                <a href="#esperienze" class="block text-gray-300 hover:text-green-400" data-link>Esperienze</a>
+                <a href="#formazione" class="block text-gray-300 hover:text-green-400" data-link>Studi</a>
+                <a href="#competenze" class="block text-gray-300 hover:text-green-400" data-link>Competenze</a>
+            </nav>
+        </aside>
 
-      <!-- Main content -->
-      <main class="flex-1 p-8 space-y-20">
-        <header id="home">
-          <p class="text-green-400 text-sm mb-2">Ciao, mi chiamo</p>
-          <h1 class="text-5xl font-bold mb-4">Ruben Castellarin</h1>
-          <h2 class="text-2xl text-gray-400 mb-6">Backend & Full Stack Developer</h2>
-          <p class="max-w-xl text-gray-300 mb-10">"Sviluppo soluzioni pratiche con un occhio alla pulizia del codice e alla scalabilità. Credo nella potenza dell'apprendimento continuo e della condivisione delle competenze."</p>
-        </header>
+        <!-- Main content -->
+        <main class="flex-1 p-8 space-y-20">
+            <header id="home">
+                <p class="text-green-400 text-sm mb-2">Ciao, mi chiamo</p>
+                <h1 class="text-5xl font-bold mb-4">Ruben Castellarin</h1>
+                <h2 class="text-2xl text-gray-400 mb-6">Backend & Full Stack Developer</h2>
+                <p class="max-w-xl text-gray-300 mb-10">"Sviluppo soluzioni pratiche con un occhio alla pulizia del
+                    codice e alla scalabilità. Credo nella potenza dell'apprendimento continuo e della condivisione
+                    delle competenze."</p>
+            </header>
 
-        <section id="esperienze">
-          <h2 class="text-3xl font-semibold mb-6">Esperienze Lavorative</h2>
-          <ul class="space-y-6">
-            <li>
-              <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
-              <p class="text-gray-400">Gennaio 2023 - Presente</p>
-              <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con nuove architetture.</p>
-            </li>
-            <li>
-              <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
-              <p class="text-gray-400">2021 - 2022</p>
-              <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con database SQL/NoSQL.</p>
-            </li>
-            <li>
-              <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
-              <p class="text-gray-400">2019 - 2021</p>
-              <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la manutenzione applicativi aziendali.</p>
-            </li>
-          </ul>
-        </section>
+            <section id="esperienze">
+                <h2 class="text-3xl font-semibold mb-6">Esperienze Lavorative</h2>
+                <ul class="space-y-6">
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
+                            nuove architetture.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+                        <p class="text-gray-400">2021 - 2022</p>
+                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
+                            database SQL/NoSQL.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+                        <p class="text-gray-400">2019 - 2021</p>
+                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
+                            manutenzione applicativi aziendali.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
+                            nuove architetture.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+                        <p class="text-gray-400">2021 - 2022</p>
+                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
+                            database SQL/NoSQL.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+                        <p class="text-gray-400">2019 - 2021</p>
+                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
+                            manutenzione applicativi aziendali.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
+                            nuove architetture.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+                        <p class="text-gray-400">2021 - 2022</p>
+                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
+                            database SQL/NoSQL.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+                        <p class="text-gray-400">2019 - 2021</p>
+                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
+                            manutenzione applicativi aziendali.</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="formazione">
-          <h2 class="text-3xl font-semibold mb-6">Formazione</h2>
-          <p class="text-xl text-green-400 font-bold mb-4">Studi</p>
-          <p class="text-gray-300 mb-6">Laurea in Informatica - Università XYZ (2015 - 2018)</p>
-        </section>
+            <section id="formazione">
+                <h2 class="text-3xl font-semibold mb-6">Formazione</h2>
+                <p class="text-xl text-green-400 font-bold mb-4">Studi</p>
+                <p class="text-gray-300 mb-6">Laurea in Informatica - Università XYZ (2015 - 2018)</p>
+                <li>
+                    <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+                    <p class="text-gray-400">Gennaio 2023 - Presente</p>
+                    <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
+                        nuove architetture.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+                    <p class="text-gray-400">2021 - 2022</p>
+                    <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
+                        database SQL/NoSQL.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+                    <p class="text-gray-400">2019 - 2021</p>
+                    <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
+                        manutenzione applicativi aziendali.</p>
+                </li>
+            </section>
 
-        <section id="competenze">
-          <h2 class="text-3xl font-semibold mb-6">Competenze Tecniche</h2>
-          <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-gray-300">
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>React</li>
-            <li>SQL / PL-SQL</li>
-            <li>MongoDB</li>
-            <li>Docker</li>
-          </ul>
-        </section>
+            <section id="competenze">
+                <h2 class="text-3xl font-semibold mb-6">Competenze Tecniche</h2>
+                <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-gray-300">
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>SQL / PL-SQL</li>
+                    <li>MongoDB</li>
+                    <li>Docker</li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
+                            nuove architetture.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+                        <p class="text-gray-400">2021 - 2022</p>
+                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
+                            database SQL/NoSQL.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+                        <p class="text-gray-400">2019 - 2021</p>
+                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
+                            manutenzione applicativi aziendali.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Sviluppatore Backend - Azienda A</h3>
+                        <p class="text-gray-400">Gennaio 2023 - Presente</p>
+                        <p class="text-gray-300">Sviluppo di API in Python e Node.js, integrazione di sistemi legacy con
+                            nuove architetture.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Full Stack Developer - Azienda B</h3>
+                        <p class="text-gray-400">2021 - 2022</p>
+                        <p class="text-gray-300">Sviluppo frontend in React e backend in Express. Interfacciamento con
+                            database SQL/NoSQL.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl font-bold text-green-400">Junior Developer - Azienda C</h3>
+                        <p class="text-gray-400">2019 - 2021</p>
+                        <p class="text-gray-300">Automazione processi interni con Python. Supporto al team IT per la
+                            manutenzione applicativi aziendali.</p>
+                    </li>
+                </ul>
+                
+            </section>
 
-        <footer class="py-10 text-center">
-          <p class="text-gray-500">&copy; 2025 Ruben Castellarin. Tutti i diritti riservati.</p>
-        </footer>
-      </main>
+            <footer class="py-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Ruben Castellarin. Tutti i diritti riservati.</p>
+            </footer>
+        </main>
     </div>
 
     <script>
-      const sections = document.querySelectorAll("main section");
-      const navLinks = document.querySelectorAll("#menu a");
+        const sections = document.querySelectorAll("main section");
+        const navLinks = document.querySelectorAll("#menu a");
 
-      window.addEventListener("scroll", () => {
-        let current = "";
+        function onScroll() {
+            let current = null;
+            const scrollMargin = 150; // margine per migliorare la sensibilità
 
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.clientHeight;
-          if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-            current = section.getAttribute("id");
-          }
-        });
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= scrollMargin && rect.bottom > scrollMargin) {
+                    current = section.getAttribute("id");
+                }
+            });
 
-        navLinks.forEach(link => {
-          link.classList.remove("text-green-400", "font-bold");
-          if (link.getAttribute("href").includes(current)) {
-            link.classList.add("text-green-400", "font-bold");
-          }
-        });
-      });
+            navLinks.forEach(link => {
+                link.classList.remove("text-green-400", "font-bold");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("text-green-400", "font-bold");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", onScroll);
+        document.addEventListener("DOMContentLoaded", onScroll); // aggiorna all'inizio
     </script>
-  </body>
+</body>
+
 </html>
