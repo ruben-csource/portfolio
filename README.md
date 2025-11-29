@@ -9,12 +9,12 @@
 
 # Ruben Castellarin
 
-_Ciao! Questa è la repository della pagina del mio curriculum vitae._
+_Ciao!👋​ Questa è la repository della pagina del mio curriculum vitae._
 
 </header>
 
 <footer>
 
-&copy; 2025 Ruben &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2025 Ruben Castellarin &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
 </footer>
